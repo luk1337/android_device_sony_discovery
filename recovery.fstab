@@ -6,7 +6,7 @@
 /vendor_image	emmc	/dev/block/bootdevice/by-name/vendor					flags=backup=1;slotselect
 /data		ext4	/dev/block/bootdevice/by-name/userdata
 /firmware	vfat	/dev/block/bootdevice/by-name/modem					flags=display="Firmware";mounttodecrypt;slotselect;fsflags=ro
-/misc		emmc	/dev/block/bootdevice/by-name/misc					flags=slotselect
+/misc		emmc	/dev/block/bootdevice/by-name/misc
 
 # Removable storage
 /sdcard1	auto	/dev/block/mmcblk1p1			/dev/block/mmcblk1		flags=display="MicroSD";storage;wipeingui;removable
