@@ -25,7 +25,7 @@ on init
 
 on boot
     setprop sys.usb.config adb
-    setprop crypto.ready 1
+    start prepdecrypt
 
 on property:crypto.ready=1
     start sbin_qseecomd
@@ -70,6 +70,13 @@ service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service-qti
     seclabel u:r:recovery:s0
 
 service sbin_qseecomd /sbin/qseecomd
+    disabled
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
+service prepdecrypt /sbin/prepdecrypt.sh
+    oneshot
     disabled
     user root
     group root
