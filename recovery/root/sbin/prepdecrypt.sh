@@ -31,6 +31,6 @@ if [ -f /s/system/build.prop ]; then
     finish
 fi
 
-setprop ro.build.version.release "$(getprop ro.build.version_orig)"
+setprop ro.build.version.release "$(getprop ro.build.version.release_orig)"
 setprop ro.build.version.security_patch "$(getprop ro.build.version.security_patch_orig)"
 finish
